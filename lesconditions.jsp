@@ -4,7 +4,7 @@
     <title>Exercices JSP</title>
 </head>
 <body bgcolor="white">
-    <h1>Conditions</h1>
+    <h1>Exercices conditionn</h1>
     
     <h2>Comparaison entre deux valeurs</h2>
     <form action="#" method="post">
