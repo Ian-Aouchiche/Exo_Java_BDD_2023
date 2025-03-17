@@ -30,15 +30,34 @@
         <% } %>
    
     
-<h2>Exercice 1 : Comparaison 1</h2>
-<p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
-A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
-Exemple :</br>
-A = 10</br>
-B = 20</br>
-C = 15</br>
-Oui C est compris entre A et B</p>
-
+        <h2>Exercice 1 : Comparaison 1</h2>
+        <form action="#" method="post">
+            <label for="a">Valeur A : </label>
+            <input type="text" id="a" name="a">
+            <label for="b">Valeur B : </label>
+            <input type="text" id="b" name="b">
+            <label for="c">Valeur C : </label>
+            <input type="text" id="c" name="c">
+            <input type="submit" value="Vérifier">
+        </form>
+        
+        <% String aStr = request.getParameter("a");
+           String bStr = request.getParameter("b");
+           String cStr = request.getParameter("c");
+           if (aStr != null && bStr != null && cStr != null && !aStr.isEmpty() && !bStr.isEmpty() && !cStr.isEmpty()) {
+               int a = Integer.parseInt(aStr);
+               int b = Integer.parseInt(bStr);
+               int c = Integer.parseInt(cStr);
+        %>
+            <p>
+                <% if (c >= a && c <= b) { %>
+                    Oui, C est compris entre A et B.
+                <% } else { %>
+                    Non, C n'est pas compris entre A et B.
+                <% } %>
+            </p>
+        <% } %>
+        
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
 
