@@ -16,89 +16,82 @@
         <% int n = Integer.parseInt(valeur); %>
         
         <h2>Exercice 1 : Le carré d'étoiles</h2>
-        <pre>
-        <% for (int i = 0; i < n; i++) { 
-            for (int j = 0; j < n; j++) { %>
+        <% for (int i = 0; i < n; i++) { %>
+            <p>
+            <% for (int j = 0; j < n; j++) { %>
                 *
             <% } %>
-            <br>
+            </p>
         <% } %>
-        </pre>
 
         <h2>Exercice 2 : Triangle rectangle gauche</h2>
-        <pre>
-        <% for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < i; j++) { %>
+        <% for (int i = 1; i <= n; i++) { %>
+            <p>
+            <% for (int j = 0; j < i; j++) { %>
                 *
             <% } %>
-            <br>
+            </p>
         <% } %>
-        </pre>
 
         <h2>Exercice 3 : Triangle rectangle inversé</h2>
-        <pre>
-        <% for (int i = n; i > 0; i--) {
-            for (int j = 0; j < i; j++) { %>
+        <% for (int i = n; i > 0; i--) { %>
+            <p>
+            <% for (int j = 0; j < i; j++) { %>
                 *
             <% } %>
-            <br>
+            </p>
         <% } %>
-        </pre>
 
         <h2>Exercice 4 : Triangle rectangle aligné à droite</h2>
-        <pre>
-        <% for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < n - i; j++) { %>
+        <% for (int i = 1; i <= n; i++) { %>
+            <p>
+            <% for (int j = 0; j < n - i; j++) { %>
                 &nbsp;
             <% } %>
             <% for (int k = 0; k < i; k++) { %>
                 *
             <% } %>
-            <br>
+            </p>
         <% } %>
-        </pre>
 
         <h2>Exercice 5 : Triangle isocèle</h2>
-        <pre>
-        <% for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < n - i; j++) { %>
+        <% for (int i = 1; i <= n; i++) { %>
+            <p>
+            <% for (int j = 0; j < n - i; j++) { %>
                 &nbsp;
             <% } %>
-            <% for (int k = 0; k < (2 * i - 1); k++) { %>
+            <% for (int k = 0; k < i; k++) { %>
                 *
             <% } %>
-            <br>
+            </p>
         <% } %>
-        </pre>
 
-        <h2>Exercice 6 : Demi losange</h2>
-        <pre>
-        <% for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < n - i; j++) { %>
+        <h2>Exercice 6 : Le demi losange</h2>
+        <% for (int i = 1; i <= n; i++) { %>
+            <p>
+            <% for (int j = 0; j < n - i; j++) { %>
                 &nbsp;
             <% } %>
             <% for (int k = 0; k < i; k++) { %>
                 *
             <% } %>
-            <br>
+            </p>
         <% } %>
-        <% for (int i = n; i > 0; i--) {
-            for (int j = 0; j < n - i; j++) { %>
+        <% for (int i = n; i > 0; i--) { %>
+            <p>
+            <% for (int j = 0; j < n - i; j++) { %>
                 &nbsp;
             <% } %>
             <% for (int k = 0; k < i; k++) { %>
                 *
             <% } %>
-            <br>
+            </p>
         <% } %>
-        </pre>
 
         <h2>Exercice 7 : La table de multiplication</h2>
-        <pre>
         <% for (int i = 1; i <= 10; i++) { %>
-            <%= n %> x <%= i %> = <%= n * i %><br>
+            <p><%= n %> x <%= i %> = <%= n * i %></p>
         <% } %>
-        </pre>
     <% } %>
     <p><a href="index.html">Retour au sommaire</a></p>
 </body>
